@@ -81,6 +81,13 @@ def play():
         print( "\nYou tied " + str(winCount) + " to " + str(loseCount) )
     
     print( "\nThank you for playing!" )
+    
+    playAgain = input( "Do you want to play again? [y/n]" )
+    if playAgain == "y":
+        play()
+    elif playAgain == "n":
+        print( "Bye!" )
+    
 
 # start playing when running the code
 play()
