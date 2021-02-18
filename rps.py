@@ -2,13 +2,11 @@ import random
 
 # check if the number of games selected is even or odd
 def even( num ):
-    half = num / 2
-    fHalf = round( half, 0 )
-    isEven = None
+    returned = num % 2
     
-    if half == fHalf:
+    if returned == 0:
         isEven = True
-    else:
+    elif returned == 1:
         isEven = False
     
     return isEven
@@ -24,8 +22,9 @@ def play():
     print( "\nWelcome to the \"Rock - Paper - Scissors\" game!" )
     print( "To play write 1, 2 or 3 for (respectivily) rock, paper or scissors" )
     matchesNum = input( "Choose the number of matches: " )
-    #while even( matchesNum ):
-    #   do something
+    if even( int(matchesNum) ):
+        print( "We recommend to choose and odd number of matches!" )
+        matchesNum = input( "Choose the number of matches: " )
     
     winCount = 0
     loseCount = 0
@@ -41,6 +40,7 @@ def play():
         if choice == pcAnsw:
             print( "It's a tie!")
             print( "Current points: " + str(winCount) + " : " + str(loseCount) )
+            x -= 1
         elif choice == 1 and pcAnsw == 2:
             print( "Rock against paper!" )
             print( "You lose this round!" )
