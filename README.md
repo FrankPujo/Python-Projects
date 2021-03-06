@@ -10,3 +10,5 @@ Little collection of Python Projects, mostly simple games from the command line.
     * a weather forecaster powered by www.darksky.net
 * [textAdventure.py](https://github.com/FrankPujo/Python-Projects/blob/main/textAdventure.py)
     * a simple text adventure game (not complete yet)
+* [spamBot.py](https://github.com/FrankPujo/Python-Projects/blob/main/spamBot.py)
+    * a spam bot with two different mods for either single or multiple words
